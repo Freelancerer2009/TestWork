@@ -12,7 +12,7 @@
         <h4>Добавить сотрудника</h4>
         <button class="close" data-dismiss="modal" area-hidden="true">X</button>
     </div>
-    @using (Ajax.BeginForm("AddEmployee", "Home", new AjaxOptions { UpdateTargetId = "results" }))
+    @using (@Html.BeginForm())
     {
         <div class="modal-content">
             <div class="modal-body">
