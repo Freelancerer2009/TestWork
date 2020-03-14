@@ -1,0 +1,53 @@
+﻿@using Data.Model
+@model IEnumerable<Employee>
+@{
+    ViewBag.Title = "Home Page";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container mt-lg-5">
+    <div class="row">
+        <div class="col-md-2">
+            <button type="button" class="btn btn-primary" id="addEmployee">Добавить работника</button>
+        </div>
+        <div class="col-md-8">
+            <div class="mainTable">
+                @{Html.RenderAction("MainTable", "Home");}
+            </div>
+            @*<table class="table table-striped">
+                <tbody>
+                    <tr>
+                        <th>#</th>
+                        <th>Должность</th>
+                        <th>Сотрудник</th>
+                        <th>Оклад</th>
+                        <th>Дата назначения</th>
+                        <th>Дата увольнения</th>
+                    </tr>
+                    @for (int i = 0, cnt = Model.Count(); i < cnt; i++)
+                    {
+                        <tr>
+                            <td>@Html.DisplayFor(x => Model.ElementAt(i).Id)</td>
+                            <td>@Html.DisplayFor(x => Model.ElementAt(i).Position.PositionName)</td>
+                            <td>@Html.DisplayFor(x => Model.ElementAt(i).FirstName)</td>
+                            <td>@Html.DisplayFor(x => Model.ElementAt(i).Salary)</td>
+                            <td>@Html.DisplayFor(x => Model.ElementAt(i).Hired)</td>
+                            <td>@Html.DisplayFor(x => Model.ElementAt(i).Fired)</td>
+                        </tr>
+
+                    }
+                </tbody>
+            </table>*@
+        </div>
+        <div class="col-md-2">
+            <div id="modDialog" class="modal fade">
+                <div id="dialogContent" class="modal-dialog"></div>
+            </div>
+            <button type="button" class="btn btn-info" id="addPos">Добавить должность</button>
+        </div>
+    </div>
+</div>
+
+@section scripts{
+    @Scripts.Render("~/Scripts/OpenModalPosition.js")
+}
