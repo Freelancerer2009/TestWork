@@ -10,8 +10,7 @@ namespace BLLayer
 {
     public class UnitOfWork
     {
-        private WebDatabaseContext _context;
-        public readonly WebDatabaseContext Context;        
+        public readonly WebDatabaseContext Context;
 
         public UnitOfWork()
         {
@@ -44,5 +43,9 @@ namespace BLLayer
         }
         #endregion
 
+        public void SaveChanges()
+        {
+            Context.SaveChanges();
+        }
     }
 }

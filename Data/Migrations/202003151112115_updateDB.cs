@@ -3,7 +3,7 @@
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class initializeDB : DbMigration
+    public partial class updateDB : DbMigration
     {
         public override void Up()
         {
@@ -16,7 +16,7 @@
                         LastName = c.String(nullable: false),
                         PositionId = c.Int(),
                         Salary = c.Decimal(precision: 18, scale: 2),
-                        Hired = c.DateTime(),
+                        Hired = c.DateTime(nullable: false),
                         Fired = c.DateTime(),
                     })
                 .PrimaryKey(t => t.Id)
@@ -28,7 +28,7 @@
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
-                        PositionName = c.String(),
+                        PositionName = c.String(nullable: false),
                     })
                 .PrimaryKey(t => t.Id);
             

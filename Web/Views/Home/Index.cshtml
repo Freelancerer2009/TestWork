@@ -6,11 +6,20 @@
 }
 
 <div class="container mt-lg-5">
-    <div class="row">
+    <div class="row mb-2">
         <div class="col-md-2">
-            <button type="button" class="btn btn-primary" id="addEmployee">Добавить работника</button>
+            <button type="button" class="btn btn-primary btn-sm" id="addEmployee">Добавить сотрудника</button>
         </div>
-        <div class="col-md-8">
+        <div class="col-md-8"></div>
+        <div class="col-md-2">
+            <div id="modDialog" class="modal fade">
+                <div id="dialogContent" class="modal-dialog"></div>
+            </div>
+            <button type="button" class="btn btn-info btn-sm" id="addPos">Добавить должность</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
             <div class="mainTable">
                 @{Html.RenderAction("MainTable", "Home");}
             </div>
@@ -38,12 +47,6 @@
                     }
                 </tbody>
             </table>*@
-        </div>
-        <div class="col-md-2">
-            <div id="modDialog" class="modal fade">
-                <div id="dialogContent" class="modal-dialog"></div>
-            </div>
-            <button type="button" class="btn btn-info" id="addPos">Добавить должность</button>
         </div>
     </div>
 </div>

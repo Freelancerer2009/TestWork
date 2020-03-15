@@ -7,13 +7,13 @@ namespace Data.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.0")]
-    public sealed partial class FK2 : IMigrationMetadata
+    public sealed partial class updateDB : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(FK2));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(updateDB));
         
         string IMigrationMetadata.Id
         {
-            get { return "202003121922441_FK2"; }
+            get { return "202003151112115_updateDB"; }
         }
         
         string IMigrationMetadata.Source

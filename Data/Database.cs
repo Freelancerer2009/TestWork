@@ -39,12 +39,13 @@ namespace Data
             Positions.Add(new Position { PositionName = "Middle QA" });
 
             context.Positions.AddRange(Positions);
+            context.SaveChanges();
 
             IList<Employee> Employees = new List<Employee>();
 
-            Employees.Add(new Employee { FirstName = "Маслов Иван", Salary = 1500, Hired = new DateTime(2015, 01, 05) });
-            Employees.Add(new Employee { FirstName = "Прыгуков Александр", Salary = 600, Hired = new DateTime(2016, 12, 22) });
-            Employees.Add(new Employee { FirstName = "Капстина Анастасия", Salary = 1800, Hired = new DateTime(2018, 05, 15) });
+            Employees.Add(new Employee { FirstName = "Иван", LastName = "Маслов", PositionId = 2, Salary = 1500, Hired = new DateTime(2015, 01, 05) });
+            Employees.Add(new Employee { FirstName = "Александр", LastName = "Прыгуков", PositionId = 3, Salary = 600, Hired = new DateTime(2016, 12, 22) });
+            Employees.Add(new Employee { FirstName = "Анастасия", LastName = "Капустина", PositionId = 5, Salary = 1800, Hired = new DateTime(2018, 05, 15) });
 
             context.Employees.AddRange(Employees);
 

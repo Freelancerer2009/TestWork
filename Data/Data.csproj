@@ -55,25 +55,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Database.cs" />
-    <Compile Include="Migrations\202003121857317_initializeDB.cs" />
-    <Compile Include="Migrations\202003121857317_initializeDB.designer.cs">
-      <DependentUpon>202003121857317_initializeDB.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202003121901216_required.cs" />
-    <Compile Include="Migrations\202003121901216_required.designer.cs">
-      <DependentUpon>202003121901216_required.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202003121905540_FK.cs" />
-    <Compile Include="Migrations\202003121905540_FK.designer.cs">
-      <DependentUpon>202003121905540_FK.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202003121922441_FK2.cs" />
-    <Compile Include="Migrations\202003121922441_FK2.designer.cs">
-      <DependentUpon>202003121922441_FK2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202003141601179_PosRequired.cs" />
-    <Compile Include="Migrations\202003141601179_PosRequired.designer.cs">
-      <DependentUpon>202003141601179_PosRequired.cs</DependentUpon>
+    <Compile Include="Migrations\202003151112115_updateDB.cs" />
+    <Compile Include="Migrations\202003151112115_updateDB.designer.cs">
+      <DependentUpon>202003151112115_updateDB.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\Employee.cs" />
@@ -85,20 +69,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202003121857317_initializeDB.resx">
-      <DependentUpon>202003121857317_initializeDB.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202003121901216_required.resx">
-      <DependentUpon>202003121901216_required.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202003121905540_FK.resx">
-      <DependentUpon>202003121905540_FK.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202003121922441_FK2.resx">
-      <DependentUpon>202003121922441_FK2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202003141601179_PosRequired.resx">
-      <DependentUpon>202003141601179_PosRequired.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202003151112115_updateDB.resx">
+      <DependentUpon>202003151112115_updateDB.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
