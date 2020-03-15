@@ -25,6 +25,13 @@ namespace Web
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
+
+            bundles.Add(new ScriptBundle("~/bundles/unobtrusive").Include(
+            "~/Scripts/jquery.min.js ",
+            "~/Scripts/jquery.unobtrusive-ajax.min.js",
+            "~/Scripts/jquery.validate.min.js",
+            "~/Scripts/jquery.validate.unobtrusive.min.js"));
+
         }
     }
 }

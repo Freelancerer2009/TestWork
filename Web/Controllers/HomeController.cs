@@ -38,40 +38,9 @@ namespace Web.Controllers
             return View();
         }
 
-        public ActionResult DetailPosition()
-        {
-            return PartialView("PartialPositionView");
-        }
-
-        public ActionResult EmployeeDetail()
-        {
-            IEnumerable<Position> PositionList = unitOfWork.PositionRepository.GetList();
-
-            List<SelectListItem> items = new List<SelectListItem>();
-            items.AddRange(PositionList.Select(x => new SelectListItem { Text = x.PositionName, Value = x.Id.ToString() }));
-
-            ViewBag.PositionList = items;
-            return PartialView("PartialEmployeeView");
-        }
-
-        [HttpPost]
-        public string AddPosition(Position position)
-        {
-            unitOfWork.PositionRepository.Add(position);
-            return "Должность добавлена";
-        }
-
-        public void AddEmployee(Employee employee)
-        {
-            if (ModelState.IsValid)
-            {
-                unitOfWork.EmployeeRepository.AddNewEmployee(employee);
-            }
-        }
-
         public ActionResult MainTable()
         {
-            IEnumerable<Employee> employees = unitOfWork.EmployeeRepository.GetList();
+            IEnumerable<Employee> employees = unitOfWork.EmployeeRepository.GetEmployees();
             return PartialView(employees);
         }
     }

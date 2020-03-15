@@ -14,8 +14,8 @@ namespace Data.Model
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
         [Display(Name = "Должность")]
-        [Required]
+        [Required(ErrorMessage = "Необходимо ввести должность")]
         public string PositionName { get; set; }
-        public ICollection<Employee> Employees { get; set; }
+        public virtual ICollection<Employee> Employees { get; set; }
     }
 }
