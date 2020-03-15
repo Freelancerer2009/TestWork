@@ -7,8 +7,12 @@
             $('#dialogContent').html(data);
             $('#modDialog').modal('show'); 
         });
+
+
         e.preventDefault();
     });
+
+
 
     $.ajaxSetup({ cache: false });
     $("#addEmployee").click(function (e) {
@@ -37,5 +41,10 @@
             });
         });
     });
+
+
+
+
+
 
 });
