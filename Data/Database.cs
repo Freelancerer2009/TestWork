@@ -16,9 +16,7 @@ namespace Data
     {
         public WebDatabaseContext() : base("name=Database")
         {
-            //Database.SetInitializer(new DropCreateDatabaseAlways<WebDatabaseContext>());
-            Database.SetInitializer<WebDatabaseContext>(new MyContextInitializer());
-
+            Database.SetInitializer(new MyContextInitializer());
         }
 
         public virtual DbSet<Employee> Employees { get; set; }
