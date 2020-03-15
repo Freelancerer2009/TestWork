@@ -23,34 +23,10 @@
             <div class="mainTable">
                 @{Html.RenderAction("MainTable", "Home");}
             </div>
-            @*<table class="table table-striped">
-                <tbody>
-                    <tr>
-                        <th>#</th>
-                        <th>Должность</th>
-                        <th>Сотрудник</th>
-                        <th>Оклад</th>
-                        <th>Дата назначения</th>
-                        <th>Дата увольнения</th>
-                    </tr>
-                    @for (int i = 0, cnt = Model.Count(); i < cnt; i++)
-                    {
-                        <tr>
-                            <td>@Html.DisplayFor(x => Model.ElementAt(i).Id)</td>
-                            <td>@Html.DisplayFor(x => Model.ElementAt(i).Position.PositionName)</td>
-                            <td>@Html.DisplayFor(x => Model.ElementAt(i).FirstName)</td>
-                            <td>@Html.DisplayFor(x => Model.ElementAt(i).Salary)</td>
-                            <td>@Html.DisplayFor(x => Model.ElementAt(i).Hired)</td>
-                            <td>@Html.DisplayFor(x => Model.ElementAt(i).Fired)</td>
-                        </tr>
-
-                    }
-                </tbody>
-            </table>*@
         </div>
     </div>
 </div>
 
 @section scripts{
-    @Scripts.Render("~/Scripts/OpenModalPosition.js")
+    @Scripts.Render("~/Scripts/OpenModal.js")
 }

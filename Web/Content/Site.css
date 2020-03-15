@@ -1,6 +1,6 @@
 ﻿body {
-    padding-top: 50px;
-    padding-bottom: 20px;
+    padding-top: 0;
+    padding-bottom: 0;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -25,6 +25,9 @@ textarea {
 }
 
 label {
-    margin-top: 2px;
-    margin-left: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
+​

@@ -1,6 +1,7 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
+    
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +10,15 @@
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
+    <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+            <img src="~/Content/Images/apriorit_logo.png" width="90" height="45" alt="logo">
+        </a>
+        <span class="navbar-text font-weight-light font-italic">
+            Тестовое задание. Грановский Денис.
+        </span>
+    </nav>
+
     <div class="container-fluid">
         @RenderBody()
         <hr />
@@ -17,6 +27,7 @@
         </footer>
     </div>
 
+    @RenderSection("Footer", false);
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)

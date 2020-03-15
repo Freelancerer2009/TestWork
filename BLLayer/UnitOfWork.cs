@@ -11,6 +11,7 @@ namespace BLLayer
     public class UnitOfWork
     {
         public readonly WebDatabaseContext Context;
+        object lockObj = new object();
 
         public UnitOfWork()
         {
@@ -45,7 +46,8 @@ namespace BLLayer
 
         public void SaveChanges()
         {
-            Context.SaveChanges();
+            lock(lockObj)
+                Context.SaveChanges();
         }
     }
 }
