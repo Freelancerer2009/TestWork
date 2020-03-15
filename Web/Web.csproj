@@ -311,10 +311,6 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Repository\Repository.csproj">
-      <Project>{A0EF852C-A37D-4E2D-90A8-6D940B46F970}</Project>
-      <Name>Repository</Name>
-    </ProjectReference>
     <ProjectReference Include="..\BLLayer\BLLayer.csproj">
       <Project>{8e5e8e4a-d236-434f-945a-1976b87fbafc}</Project>
       <Name>BLLayer</Name>
@@ -322,6 +318,10 @@
     <ProjectReference Include="..\Data\Data.csproj">
       <Project>{EE9DC858-50F1-4A21-9305-E41300FB70D2}</Project>
       <Name>Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Repository\Repository.csproj">
+      <Project>{A0EF852C-A37D-4E2D-90A8-6D940B46F970}</Project>
+      <Name>Repository</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
